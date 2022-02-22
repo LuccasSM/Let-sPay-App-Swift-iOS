@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F82306A727BB58380045AB47 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82306A627BB58380045AB47 /* Colors.swift */; };
+		F82306AA27BB58560045AB47 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82306A927BB58560045AB47 /* Splash.swift */; };
+		F82306AD27BB58810045AB47 /* Pre-Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82306AC27BB58810045AB47 /* Pre-Login.swift */; };
+		F8A2AFC527BC900000747970 /* GlacialIndifference-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8A2AFC327BC900000747970 /* GlacialIndifference-Bold.otf */; };
+		F8A2AFC627BC900000747970 /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8A2AFC427BC900000747970 /* GlacialIndifference-Regular.otf */; };
+		F8A5F77D27BB578E00F99926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5F77C27BB578E00F99926 /* AppDelegate.swift */; };
+		F8A5F77F27BB578E00F99926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5F77E27BB578E00F99926 /* SceneDelegate.swift */; };
+		F8A5F78427BB578E00F99926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5F78227BB578E00F99926 /* Main.storyboard */; };
+		F8A5F78627BB578F00F99926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A5F78527BB578F00F99926 /* Assets.xcassets */; };
+		F8A5F78927BB578F00F99926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A5F78727BB578F00F99926 /* LaunchScreen.storyboard */; };
+		F8C0D6CE27BED31500139621 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0D6CD27BED31500139621 /* Dimensions.swift */; };
+		F8C0D6D127BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8C0D6CF27BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf */; };
+		F8C0D6D227BEF9DF00139621 /* Sebino Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8C0D6D027BEF9DF00139621 /* Sebino Regular.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F82306A627BB58380045AB47 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F82306A927BB58560045AB47 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		F82306AC27BB58810045AB47 /* Pre-Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pre-Login.swift"; sourceTree = "<group>"; };
+		F8A2AFC327BC900000747970 /* GlacialIndifference-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlacialIndifference-Bold.otf"; sourceTree = "<group>"; };
+		F8A2AFC427BC900000747970 /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
+		F8A5F77927BB578E00F99926 /* Let'sPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let'sPay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A5F77C27BB578E00F99926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8A5F77E27BB578E00F99926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F8A5F78327BB578E00F99926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8A5F78527BB578F00F99926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8A5F78827BB578F00F99926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8A5F78A27BB578F00F99926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C0D6CD27BED31500139621 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		F8C0D6CF27BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kabrio-Soft-Regular-trial.ttf"; sourceTree = "<group>"; };
+		F8C0D6D027BEF9DF00139621 /* Sebino Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sebino Regular.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8A5F77627BB578E00F99926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F82306A527BB58220045AB47 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F82306A627BB58380045AB47 /* Colors.swift */,
+				F8C0D6CD27BED31500139621 /* Dimensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F82306A827BB58490045AB47 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F82306A927BB58560045AB47 /* Splash.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F82306AB27BB586C0045AB47 /* Pré-Login */ = {
+			isa = PBXGroup;
+			children = (
+				F82306AC27BB58810045AB47 /* Pre-Login.swift */,
+			);
+			name = "Pré-Login";
+			path = "Pré-Login";
+			sourceTree = "<group>";
+		};
+		F82306AE27BB58950045AB47 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F8C0D6CF27BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf */,
+				F8C0D6D027BEF9DF00139621 /* Sebino Regular.ttf */,
+				F8A2AFC327BC900000747970 /* GlacialIndifference-Bold.otf */,
+				F8A2AFC427BC900000747970 /* GlacialIndifference-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F8A5F77027BB578E00F99926 = {
+			isa = PBXGroup;
+			children = (
+				F8A5F77B27BB578E00F99926 /* Let'sPay */,
+				F8A5F77A27BB578E00F99926 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8A5F77A27BB578E00F99926 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5F77927BB578E00F99926 /* Let'sPay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8A5F77B27BB578E00F99926 /* Let'sPay */ = {
+			isa = PBXGroup;
+			children = (
+				F82306AE27BB58950045AB47 /* Fonts */,
+				F82306AB27BB586C0045AB47 /* Pré-Login */,
+				F82306A827BB58490045AB47 /* Splash */,
+				F82306A527BB58220045AB47 /* Utils */,
+				F8A5F77C27BB578E00F99926 /* AppDelegate.swift */,
+				F8A5F77E27BB578E00F99926 /* SceneDelegate.swift */,
+				F8A5F78227BB578E00F99926 /* Main.storyboard */,
+				F8A5F78527BB578F00F99926 /* Assets.xcassets */,
+				F8A5F78727BB578F00F99926 /* LaunchScreen.storyboard */,
+				F8A5F78A27BB578F00F99926 /* Info.plist */,
+			);
+			path = "Let'sPay";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8A5F77827BB578E00F99926 /* Let'sPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8A5F78D27BB578F00F99926 /* Build configuration list for PBXNativeTarget "Let'sPay" */;
+			buildPhases = (
+				F8A5F77527BB578E00F99926 /* Sources */,
+				F8A5F77627BB578E00F99926 /* Frameworks */,
+				F8A5F77727BB578E00F99926 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Let'sPay";
+			productName = "Let'sPay";
+			productReference = F8A5F77927BB578E00F99926 /* Let'sPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8A5F77127BB578E00F99926 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F8A5F77827BB578E00F99926 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F8A5F77427BB578E00F99926 /* Build configuration list for PBXProject "Let'sPay" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8A5F77027BB578E00F99926;
+			productRefGroup = F8A5F77A27BB578E00F99926 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8A5F77827BB578E00F99926 /* Let'sPay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8A5F77727BB578E00F99926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A2AFC527BC900000747970 /* GlacialIndifference-Bold.otf in Resources */,
+				F8A5F78927BB578F00F99926 /* LaunchScreen.storyboard in Resources */,
+				F8C0D6D127BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf in Resources */,
+				F8A2AFC627BC900000747970 /* GlacialIndifference-Regular.otf in Resources */,
+				F8C0D6D227BEF9DF00139621 /* Sebino Regular.ttf in Resources */,
+				F8A5F78627BB578F00F99926 /* Assets.xcassets in Resources */,
+				F8A5F78427BB578E00F99926 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8A5F77527BB578E00F99926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82306AD27BB58810045AB47 /* Pre-Login.swift in Sources */,
+				F8A5F77D27BB578E00F99926 /* AppDelegate.swift in Sources */,
+				F8C0D6CE27BED31500139621 /* Dimensions.swift in Sources */,
+				F82306A727BB58380045AB47 /* Colors.swift in Sources */,
+				F82306AA27BB58560045AB47 /* Splash.swift in Sources */,
+				F8A5F77F27BB578E00F99926 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8A5F78227BB578E00F99926 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8A5F78327BB578E00F99926 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8A5F78727BB578F00F99926 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8A5F78827BB578F00F99926 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8A5F78B27BB578F00F99926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8A5F78C27BB578F00F99926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8A5F78E27BB578F00F99926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUW7T38LGA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Let'sPay/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Emulador-iPhone.Let-sPay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8A5F78F27BB578F00F99926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUW7T38LGA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Let'sPay/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Emulador-iPhone.Let-sPay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8A5F77427BB578E00F99926 /* Build configuration list for PBXProject "Let'sPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8A5F78B27BB578F00F99926 /* Debug */,
+				F8A5F78C27BB578F00F99926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8A5F78D27BB578F00F99926 /* Build configuration list for PBXNativeTarget "Let'sPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8A5F78E27BB578F00F99926 /* Debug */,
+				F8A5F78F27BB578F00F99926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8A5F77127BB578E00F99926 /* Project object */;
+}
