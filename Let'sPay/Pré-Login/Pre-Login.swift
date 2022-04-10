@@ -130,7 +130,7 @@ class Pre_Login: UIViewController {
         titleAreaBlue.font = UIFont.init(name: "KabrioSoft-Regular", size: 22)
         titleAreaBlue.textColor = .white
         titleAreaBlue.numberOfLines = 0
-        let attributedString = NSMutableAttributedString(string: "Como nós \nVocê nunca viu \nLet'sPay, sua nova \nForma de pagamento")
+        let attributedString = NSMutableAttributedString(string: "Como nsós \nVocê nunca viu \nLet'sPay, sua nova \nForma de pagamento")
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 10
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
