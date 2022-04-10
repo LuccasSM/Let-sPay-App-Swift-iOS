@@ -51,9 +51,6 @@ class Pre_Login: UIViewController {
         startDisplayLink() // MARK: --- Chamando a ondinha
         setupViews()
         
-        //            teste.widthAnchor.constraint(equalTo: self.uiViewBlue.widthAnchor, multiplier: 0.28/5),
-        //            teste.heightAnchor.constraint(equalTo: self.uiViewBlue.heightAnchor, multiplier: 0.27/5),
-        
         NSLayoutConstraint.activate([
             uiViewBlue.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             uiViewBlue.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -69,12 +66,10 @@ class Pre_Login: UIViewController {
             image.widthAnchor.constraint(equalTo: uiViewBlue.widthAnchor, multiplier: 1.70/5),
             image.heightAnchor.constraint(equalTo: uiViewBlue.heightAnchor, multiplier: 0.365),
             
-            teste.topAnchor.constraint(equalTo: uiViewBlue.safeAreaLayoutGuide.topAnchor, constant: 18),
-            teste.trailingAnchor.constraint(equalTo: uiViewBlue.trailingAnchor, constant: -20),
-            teste.leadingAnchor.constraint(equalTo: uiViewBlue.leadingAnchor),
-            teste.centerYAnchor.constraint(equalTo: uiViewBlue.centerYAnchor, constant: 8.5),
-            teste.widthAnchor.constraint(equalToConstant: 30),
-            teste.heightAnchor.constraint(equalToConstant: 30),
+            interrocationButton.widthAnchor.constraint(equalToConstant: 20),
+            interrocationButton.heightAnchor.constraint(equalToConstant: 20),
+            interrocationButton.topAnchor.constraint(equalTo: uiViewBlue.safeAreaLayoutGuide.topAnchor, constant: 18),
+            interrocationButton.trailingAnchor.constraint(equalTo: uiViewBlue.trailingAnchor, constant: -20),
             
             titleAreaBlue.centerXAnchor.constraint(equalTo: uiViewBlue.centerXAnchor),
             titleAreaBlue.centerYAnchor.constraint(equalTo: uiViewBlue.centerYAnchor, constant: 30),
@@ -109,13 +104,13 @@ class Pre_Login: UIViewController {
     private lazy var titlePreLogin: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-//        title.text = "Let'sPay"
+        title.text = "Let'sPay"
         title.textColor = .white
         title.font = UIFont.init(name: "GlacialIndifference-Bold", size: 36)
         return title
     }()
     
-    private lazy var teste: UIButton = {
+    private lazy var interrocationButton: UIButton = {
         let image = UIButton()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.setImage(UIImage(named: "interrogation"), for: .normal)
@@ -135,11 +130,11 @@ class Pre_Login: UIViewController {
         titleAreaBlue.font = UIFont.init(name: "KabrioSoft-Regular", size: 22)
         titleAreaBlue.textColor = .white
         titleAreaBlue.numberOfLines = 0
-//        let attributedString = NSMutableAttributedString(string: "Como nós \nVocê nunca viu \nLet'sPay, sua nova \nForma de pagamento")
+        let attributedString = NSMutableAttributedString(string: "Como nós \nVocê nunca viu \nLet'sPay, sua nova \nForma de pagamento")
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 10
-//        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-//        titleAreaBlue.attributedText = attributedString
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        titleAreaBlue.attributedText = attributedString
         return titleAreaBlue
     }()
     
@@ -172,7 +167,7 @@ class Pre_Login: UIViewController {
     func setupViews() {
         self.view.addSubview(uiViewBlue)
         self.view.addSubview(titlePreLogin)
-        self.uiViewBlue.addSubview(teste)
+        self.uiViewBlue.addSubview(interrocationButton)
         self.uiViewBlue.addSubview(image)
         self.uiViewBlue.addSubview(titleAreaBlue)
         self.view.addSubview(buttonBlue)
