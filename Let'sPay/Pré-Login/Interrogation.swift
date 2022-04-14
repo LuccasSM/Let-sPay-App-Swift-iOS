@@ -11,24 +11,17 @@ class Interrogation: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
         view.backgroundColor = .systemOrange
-    }
-=======
-
-        // Do any additional setup after loading the view.
+        
+    //MARK: - Método para Observar quando entrar e sair de Background o App
+            
+        NotificationCenter.default.addObserver(self, selector: #selector(enterInBackground), name: UIApplication.willResignActiveNotification, object: .none)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Func para chamar Background via Present
+    
+    @objc func enterInBackground() {
+        self.view.isHidden = true
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
->>>>>>> 21aa2b774ade565d5c78dcb20942616b9542d1a7
 }

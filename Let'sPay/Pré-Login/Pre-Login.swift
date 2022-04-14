@@ -52,6 +52,8 @@ class Pre_Login: UIViewController {
             buttonTransparent.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
         ])
         
+    // MARK: - Chamando Background
+        
         let background = Background(frame: view.frame)
         self.view.addSubview(background)
         

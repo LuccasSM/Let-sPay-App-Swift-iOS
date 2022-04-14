@@ -12,5 +12,12 @@ class AccessAccount: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGreen
+     
+        // MARK: - Chamando Background
+        
+        let background = Background(frame: view.frame)
+        self.view.addSubview(background)
+        
+        background.isHidden = true
     }
 }
