@@ -9,13 +9,13 @@ import UIKit
 
 class Splash: UIViewController {
     
-    // MARK: --- Inserindo funções e layout
+    // MARK: - Inserindo funções e layout
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         
-    // MARK: --- Ajustes de constraint (Removendo o is.Active = true)
+    // MARK: - Ajustes de constraint (Removendo o is.Active = true)
         
         NSLayoutConstraint.activate([
             letspay.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -26,7 +26,7 @@ class Splash: UIViewController {
         ])
     }
     
-    // MARK: --- Criando as Views da Splash
+    // MARK: - Criando as Views da Splash
     
     private lazy var letspay: UILabel = {
         let text = UILabel()
@@ -46,7 +46,7 @@ class Splash: UIViewController {
         return text
     }()
     
-    // MARK: --- Setando as Views da Splash
+    // MARK: - Setando as Views da Splash
 
     func setupViews() {
         view.backgroundColor = .blueLetsPay
@@ -54,19 +54,19 @@ class Splash: UIViewController {
         view.addSubview(pagamento)
     }
     
-    // MARK: --- Theme Light: Hrs Wifi 4G Bateria
+    // MARK: - Theme Light: Hrs Wifi 4G Bateria
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    // MARK: --- Remover Orientação de tela
+    // MARK: - Remover Orientação de tela
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
     }
     
-    // MARK: --- Chamando a Pré-Login
+    // MARK: - Chamando a Pré-Login
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

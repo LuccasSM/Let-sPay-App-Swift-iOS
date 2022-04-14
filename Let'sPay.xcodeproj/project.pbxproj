@@ -20,6 +20,10 @@
 		F8C0D6CE27BED31500139621 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0D6CD27BED31500139621 /* Dimensions.swift */; };
 		F8C0D6D127BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8C0D6CF27BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf */; };
 		F8C0D6D227BEF9DF00139621 /* Sebino Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8C0D6D027BEF9DF00139621 /* Sebino Regular.ttf */; };
+		F8C429032808A04B00208BC0 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C429022808A04B00208BC0 /* Background.swift */; };
+		F8C429052808A0F000208BC0 /* Interrogation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C429042808A0F000208BC0 /* Interrogation.swift */; };
+		F8C429072808A10E00208BC0 /* AccessAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C429062808A10E00208BC0 /* AccessAccount.swift */; };
+		F8C429092808A12700208BC0 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C429082808A12700208BC0 /* CreateAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		F8C0D6CD27BED31500139621 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		F8C0D6CF27BEF9DF00139621 /* Kabrio-Soft-Regular-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kabrio-Soft-Regular-trial.ttf"; sourceTree = "<group>"; };
 		F8C0D6D027BEF9DF00139621 /* Sebino Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sebino Regular.ttf"; sourceTree = "<group>"; };
+		F8C429022808A04B00208BC0 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		F8C429042808A0F000208BC0 /* Interrogation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interrogation.swift; sourceTree = "<group>"; };
+		F8C429062808A10E00208BC0 /* AccessAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessAccount.swift; sourceTree = "<group>"; };
+		F8C429082808A12700208BC0 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			children = (
 				F82306A627BB58380045AB47 /* Colors.swift */,
 				F8C0D6CD27BED31500139621 /* Dimensions.swift */,
+				F8C429022808A04B00208BC0 /* Background.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -72,6 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				F82306AC27BB58810045AB47 /* Pre-Login.swift */,
+				F8C429042808A0F000208BC0 /* Interrogation.swift */,
+				F8C429062808A10E00208BC0 /* AccessAccount.swift */,
+				F8C429082808A12700208BC0 /* CreateAccount.swift */,
 			);
 			name = "Pré-Login";
 			path = "Pré-Login";
@@ -197,9 +209,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82306AD27BB58810045AB47 /* Pre-Login.swift in Sources */,
+				F8C429032808A04B00208BC0 /* Background.swift in Sources */,
 				F8A5F77D27BB578E00F99926 /* AppDelegate.swift in Sources */,
+				F8C429052808A0F000208BC0 /* Interrogation.swift in Sources */,
+				F8C429072808A10E00208BC0 /* AccessAccount.swift in Sources */,
 				F8C0D6CE27BED31500139621 /* Dimensions.swift in Sources */,
 				F82306A727BB58380045AB47 /* Colors.swift in Sources */,
+				F8C429092808A12700208BC0 /* CreateAccount.swift in Sources */,
 				F82306AA27BB58560045AB47 /* Splash.swift in Sources */,
 				F8A5F77F27BB578E00F99926 /* SceneDelegate.swift in Sources */,
 			);
