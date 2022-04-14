@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let _ = (scene as? UIWindowScene) else { return }
     guard let windowScene = (scene as? UIWindowScene) else { return }
                 
-    //MARK: --- View Principal
+    //MARK: - View Principal
                 
     let safeWindow = UIWindow(windowScene: windowScene)
     safeWindow.frame = UIScreen.main.bounds

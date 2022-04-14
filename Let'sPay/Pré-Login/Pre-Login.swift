@@ -7,48 +7,14 @@
 
 import UIKit
 
-class ScreenBlockBackground: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .blueLetsPay
-        NotificationCenter.default.addObserver(self, selector: #selector(exitBG), name: UIApplication.didBecomeActiveNotification, object: .none)
-        NotificationCenter.default.addObserver(self, selector: #selector(enterBG), name: UIApplication.willResignActiveNotification, object: .none)
-        
-        //MARK: --- View's entrando em background
-        
-        let title = UILabel(frame: .zero)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(title)
-        title.text = "Let'sPay"
-        title.textColor = .white
-        title.font = UIFont.init(name: "GlacialIndifference-Bold", size: 36)
-        title.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) não foi implementado")
-    }
-    
-    // MARK: --- Chamando as funções de entrar e sair background
-    
-    @objc func enterBG() {
-        self.isHidden = false
-    }
-        
-    @objc func exitBG() {
-        self.isHidden = true
-    }
-}
-
 class Pre_Login: UIViewController {
 
-    // MARK: --- Componentes Pré Login
+    // MARK: - Componentes Pré Login
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.layer.addSublayer(shapeLayer)
-        startDisplayLink() // MARK: --- Chamando a ondinha
+        startDisplayLink() // MARK: - Chamando a ondinha
         setupViews()
         
         NSLayoutConstraint.activate([
@@ -66,10 +32,10 @@ class Pre_Login: UIViewController {
             image.widthAnchor.constraint(equalTo: uiViewBlue.widthAnchor, multiplier: 1.70/5),
             image.heightAnchor.constraint(equalTo: uiViewBlue.heightAnchor, multiplier: 0.365),
             
-            interrocationButton.widthAnchor.constraint(equalToConstant: 20),
-            interrocationButton.heightAnchor.constraint(equalToConstant: 20),
-            interrocationButton.topAnchor.constraint(equalTo: uiViewBlue.safeAreaLayoutGuide.topAnchor, constant: 18),
-            interrocationButton.trailingAnchor.constraint(equalTo: uiViewBlue.trailingAnchor, constant: -20),
+            interrogationButton.widthAnchor.constraint(equalToConstant: 20),
+            interrogationButton.heightAnchor.constraint(equalToConstant: 20),
+            interrogationButton.topAnchor.constraint(equalTo: uiViewBlue.safeAreaLayoutGuide.topAnchor, constant: 18),
+            interrogationButton.trailingAnchor.constraint(equalTo: uiViewBlue.trailingAnchor, constant: -20),
             
             titleAreaBlue.centerXAnchor.constraint(equalTo: uiViewBlue.centerXAnchor),
             titleAreaBlue.centerYAnchor.constraint(equalTo: uiViewBlue.centerYAnchor, constant: 30),
@@ -86,13 +52,15 @@ class Pre_Login: UIViewController {
             buttonTransparent.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
         ])
         
-        let screenBlockBackground = ScreenBlockBackground(frame: view.frame)
-        self.view.addSubview(screenBlockBackground)
+    // MARK: - Inserindo Banckground
         
-        screenBlockBackground.isHidden = true
+        let background = Background(frame: view.frame)
+        self.view.addSubview(background)
+        
+        background.isHidden = true
     }
     
-    // MARK: --- Criando as Views da Pré Login
+    // MARK: - Criando as Views da Pré Login
     
     private lazy var uiViewBlue: UIView = {
         let viewGradient = UIView()
@@ -110,10 +78,12 @@ class Pre_Login: UIViewController {
         return title
     }()
     
-    private lazy var interrocationButton: UIButton = {
+    private lazy var interrogationButton: UIButton = {
         let image = UIButton()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.setImage(UIImage(named: "interrogation"), for: .normal)
+        image.adjustsImageWhenHighlighted = false
+        image.addTarget(self, action: #selector(navigationInterrogation), for: .touchUpInside)
         return image
     }()
     
@@ -146,6 +116,8 @@ class Pre_Login: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.init(name: "Sebino-Regular", size: 16)
         button.layer.cornerRadius = 10
+        button.adjustsImageWhenHighlighted = false
+        button.addTarget(self, action: #selector(navigationAccessAccount), for: .touchUpInside)
         return button
     }()
     
@@ -159,33 +131,35 @@ class Pre_Login: UIViewController {
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 1
         button.layer.borderColor = CGColor(red: 78/255, green: 133/255, blue: 255/255, alpha: 1.0)
+        button.adjustsImageWhenHighlighted = false
+        button.addTarget(self, action: #selector(navigationCreateAccount), for: .touchUpInside)
         return button
     }()
     
-    // MARK: --- Setando as Views da Pré Login
+    // MARK: - Setando as Views da Pré Login
     
     func setupViews() {
         self.view.addSubview(uiViewBlue)
         self.view.addSubview(titlePreLogin)
-        self.uiViewBlue.addSubview(interrocationButton)
+        self.uiViewBlue.addSubview(interrogationButton)
         self.uiViewBlue.addSubview(image)
         self.uiViewBlue.addSubview(titleAreaBlue)
         self.view.addSubview(buttonBlue)
         self.view.addSubview(buttonTransparent)
     }
     
-    // MARK: --- Theme Light: Hrs Wifi 4G Bateria
+    // MARK: - Theme Light: Hrs Wifi 4G Bateria
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    // MARK: --- Intervalo de tempos das animações
+    // MARK: - Intervalo de tempos das animações
     
     private weak var displayLink: CADisplayLink?
     private var startTime: CFTimeInterval = 0
 
-    // MARK: --- O `CAShapeLayer` que conterá o caminho animado
+    // MARK: - O `CAShapeLayer` que conterá o caminho animado
 
     private let shapeLayer: CAShapeLayer = {
         let shapeLayer = CAShapeLayer()
@@ -195,7 +169,7 @@ class Pre_Login: UIViewController {
         return shapeLayer
     }()
 
-    // MARK: --- Pare quando ele desaparecer, certifique-se de fazer isso porque o link de exibição mantém uma referência forte ao seu `destino` e não queremos um ciclo de referência forte.
+    // MARK: - Pare quando ele desaparecer, certifique-se de fazer isso porque o link de exibição mantém uma referência forte ao seu `destino` e não queremos um ciclo de referência forte.
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -206,7 +180,7 @@ class Pre_Login: UIViewController {
         setGradientBackground()
     }
 
-    // MARK: --- Inicia o link de exibição
+    // MARK: - Inicia o link de exibição
 
     private func startDisplayLink() {
         startTime = CACurrentMediaTime()
@@ -216,20 +190,20 @@ class Pre_Login: UIViewController {
         self.displayLink = displayLink
     }
 
-    // MARK: --- Para o link de exibição
+    // MARK: - Para o link de exibição
 
     private func stopDisplayLink() {
         displayLink?.invalidate()
     }
         
-    // MARK: --- Manipule o temporizador de link de exibição. Parâmetro displayLink: O link de exibição.
+    // MARK: - Manipule o temporizador de link de exibição. Parâmetro displayLink: O link de exibição.
 
     @objc func handleDisplayLink(_ displayLink: CADisplayLink) {
         let elapsed = CACurrentMediaTime() - startTime
         shapeLayer.path = wave(at: elapsed).cgPath
     }
 
-    // MARK: --- Cria a onda em um determinado tempo decorrido. Você deve personalizar isso como achar melhor. Parâmetro decorrido: quantos segundos se passaram. Retorna: O `UIBezierPath` para um determinado ponto de tempo.
+    // MARK: - Cria a onda em um determinado tempo decorrido. Você deve personalizar isso como achar melhor. Parâmetro decorrido: quantos segundos se passaram. Retorna: O `UIBezierPath` para um determinado ponto de tempo.
 
     private func wave(at elapsed: Double) -> UIBezierPath {
         let elapsed = CGFloat(elapsed)
@@ -252,7 +226,7 @@ class Pre_Login: UIViewController {
         return path
     }
     
-    // MARK: --- Cor gradient background azul
+    // MARK: - Cor gradient background azul
     
     func setGradientBackground() {
         let colorTop =  UIColor(red: 78.0/255.0, green: 133.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
@@ -264,5 +238,40 @@ class Pre_Login: UIViewController {
         gradientLayer.frame = self.view.bounds
                 
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    //MARK: - Chamando Navegacoes da Tela
+    
+    @objc func navigationInterrogation() {
+        let vc = Interrogation()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func navigationAccessAccount() {
+        let controller = AccessAccount()
+        let navVC = UINavigationController(rootViewController: controller)
+        navVC.modalPresentationStyle = .fullScreen
+        navVC.modalTransitionStyle = .crossDissolve
+        present(navVC, animated: false, completion: nil)
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+    }
+    
+    @objc func navigationCreateAccount() {
+        let controller = CreateAccount()
+        let navVC = UINavigationController(rootViewController: controller)
+        navVC.modalPresentationStyle = .fullScreen
+        navVC.modalTransitionStyle = .crossDissolve
+        present(navVC, animated: false, completion: nil)
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
     }
 }
