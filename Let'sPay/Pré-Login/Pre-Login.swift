@@ -14,7 +14,7 @@ class Pre_Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.layer.addSublayer(shapeLayer)
-        startDisplayLink() // MARK: --- Chamando a ondinha
+        startDisplayLink() // MARK: - Chamando a ondinha
         setupViews()
         
         NSLayoutConstraint.activate([
@@ -32,10 +32,10 @@ class Pre_Login: UIViewController {
             image.widthAnchor.constraint(equalTo: uiViewBlue.widthAnchor, multiplier: 1.70/5),
             image.heightAnchor.constraint(equalTo: uiViewBlue.heightAnchor, multiplier: 0.365),
             
-            interrocationButton.widthAnchor.constraint(equalToConstant: 20),
-            interrocationButton.heightAnchor.constraint(equalToConstant: 20),
-            interrocationButton.topAnchor.constraint(equalTo: uiViewBlue.safeAreaLayoutGuide.topAnchor, constant: 18),
-            interrocationButton.trailingAnchor.constraint(equalTo: uiViewBlue.trailingAnchor, constant: -20),
+            interrogationButton.widthAnchor.constraint(equalToConstant: 20),
+            interrogationButton.heightAnchor.constraint(equalToConstant: 20),
+            interrogationButton.topAnchor.constraint(equalTo: uiViewBlue.safeAreaLayoutGuide.topAnchor, constant: 18),
+            interrogationButton.trailingAnchor.constraint(equalTo: uiViewBlue.trailingAnchor, constant: -20),
             
             titleAreaBlue.centerXAnchor.constraint(equalTo: uiViewBlue.centerXAnchor),
             titleAreaBlue.centerYAnchor.constraint(equalTo: uiViewBlue.centerYAnchor, constant: 30),
@@ -76,7 +76,7 @@ class Pre_Login: UIViewController {
         return title
     }()
     
-    private lazy var interrocationButton: UIButton = {
+    private lazy var interrogationButton: UIButton = {
         let image = UIButton()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.setImage(UIImage(named: "interrogation"), for: .normal)
@@ -98,7 +98,7 @@ class Pre_Login: UIViewController {
         titleAreaBlue.font = UIFont.init(name: "KabrioSoft-Regular", size: 22)
         titleAreaBlue.textColor = .white
         titleAreaBlue.numberOfLines = 0
-        let attributedString = NSMutableAttributedString(string: "Como nsós \nVocê nunca viu \nLet'sPay, sua nova \nForma de pagamento")
+        let attributedString = NSMutableAttributedString(string: "Como nós \nVocê nunca viu \nLet'sPay, sua nova \nForma de pagamento")
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 10
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
@@ -139,7 +139,7 @@ class Pre_Login: UIViewController {
     func setupViews() {
         self.view.addSubview(uiViewBlue)
         self.view.addSubview(titlePreLogin)
-        self.uiViewBlue.addSubview(interrocationButton)
+        self.uiViewBlue.addSubview(interrogationButton)
         self.uiViewBlue.addSubview(image)
         self.uiViewBlue.addSubview(titleAreaBlue)
         self.view.addSubview(buttonBlue)
@@ -244,7 +244,6 @@ class Pre_Login: UIViewController {
         let vc = Interrogation()
         self.present(vc, animated: true, completion: nil)
     }
-
     @objc func navigationAccessAccount() {
         let controller = AccessAccount()
         let navVC = UINavigationController(rootViewController: controller)
@@ -258,7 +257,6 @@ class Pre_Login: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
     }
-
     @objc func navigationCreateAccount() {
         let controller = CreateAccount()
         let navVC = UINavigationController(rootViewController: controller)
