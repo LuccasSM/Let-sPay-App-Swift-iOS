@@ -70,11 +70,8 @@ class Pre_Login: UIViewController {
     }()
     
     private lazy var titlePreLogin: UILabel = {
-        let title = UILabel()
-        title.translatesAutoresizingMaskIntoConstraints = false
-        title.text = "Let'sPay"
+        let title = TitleLets().titleLets()
         title.textColor = .white
-        title.font = UIFont.init(name: "GlacialIndifference-Bold", size: 36)
         return title
     }()
     
