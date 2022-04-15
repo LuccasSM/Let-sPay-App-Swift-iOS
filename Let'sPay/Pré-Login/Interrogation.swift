@@ -23,7 +23,6 @@ class Interrogation: UIViewController {
             header.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             header.topAnchor.constraint(equalTo: self.view.topAnchor),
             
-//            titleInterrogation.centerXAnchor.constraint(equalTo: self.header.centerXAnchor),
             titleInterrogation.centerYAnchor.constraint(equalTo: self.header.centerYAnchor),
             titleInterrogation.leadingAnchor.constraint(equalTo: self.header.layoutMarginsGuide.leadingAnchor, constant: 5),
             
