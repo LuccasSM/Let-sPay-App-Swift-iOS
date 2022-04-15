@@ -10,6 +10,8 @@
 		F82306A727BB58380045AB47 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82306A627BB58380045AB47 /* Colors.swift */; };
 		F82306AA27BB58560045AB47 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82306A927BB58560045AB47 /* Splash.swift */; };
 		F82306AD27BB58810045AB47 /* Pre-Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82306AC27BB58810045AB47 /* Pre-Login.swift */; };
+		F8300F5C2809C7E10078D7D1 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8300F5B2809C7E10078D7D1 /* Header.swift */; };
+		F8300F5E2809C7F00078D7D1 /* TitleLets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8300F5D2809C7F00078D7D1 /* TitleLets.swift */; };
 		F8A2AFC527BC900000747970 /* GlacialIndifference-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8A2AFC327BC900000747970 /* GlacialIndifference-Bold.otf */; };
 		F8A2AFC627BC900000747970 /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F8A2AFC427BC900000747970 /* GlacialIndifference-Regular.otf */; };
 		F8A5F77D27BB578E00F99926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5F77C27BB578E00F99926 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 		F82306A627BB58380045AB47 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F82306A927BB58560045AB47 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		F82306AC27BB58810045AB47 /* Pre-Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pre-Login.swift"; sourceTree = "<group>"; };
+		F8300F5B2809C7E10078D7D1 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		F8300F5D2809C7F00078D7D1 /* TitleLets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLets.swift; sourceTree = "<group>"; };
 		F8A2AFC327BC900000747970 /* GlacialIndifference-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlacialIndifference-Bold.otf"; sourceTree = "<group>"; };
 		F8A2AFC427BC900000747970 /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
 		F8A5F77927BB578E00F99926 /* Let'sPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let'sPay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +69,8 @@
 				F82306A627BB58380045AB47 /* Colors.swift */,
 				F8C0D6CD27BED31500139621 /* Dimensions.swift */,
 				F8C429022808A04B00208BC0 /* Background.swift */,
+				F8300F5B2809C7E10078D7D1 /* Header.swift */,
+				F8300F5D2809C7F00078D7D1 /* TitleLets.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 				F8C429032808A04B00208BC0 /* Background.swift in Sources */,
 				F8A5F77D27BB578E00F99926 /* AppDelegate.swift in Sources */,
 				F8C429052808A0F000208BC0 /* Interrogation.swift in Sources */,
+				F8300F5E2809C7F00078D7D1 /* TitleLets.swift in Sources */,
 				F8C429072808A10E00208BC0 /* AccessAccount.swift in Sources */,
+				F8300F5C2809C7E10078D7D1 /* Header.swift in Sources */,
 				F8C0D6CE27BED31500139621 /* Dimensions.swift in Sources */,
 				F82306A727BB58380045AB47 /* Colors.swift in Sources */,
 				F8C429092808A12700208BC0 /* CreateAccount.swift in Sources */,
